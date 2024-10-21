@@ -1,1 +1,30 @@
+#include<iostram>
+#include<cstring>
+using namespace std;
+char array[40];
+void funtion(int i,char *temp)
+{
+char retemp[40];
+strcpy(retemp,temp);
+if(i==strlen(array))
+  {
+   count<<"("<<temp<<")";
+   return;
+  }
+else
+  {
+funtion(i+1,retemp);
+strncat(retemp,(array+i),1);
+funtion(i+1,retemp)
+  }
+}
 
+
+int main()
+{
+int n;
+char temp[40]={0};
+cin>>n>>array;
+funtion(0,temp);
+return0
+}
